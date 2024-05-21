@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="diaSemana"></div>
+
+  <script>
+    // Obtenemos el día de la semana
+    var fecha = new Date();
+    var diaDeLaSemana = fecha.getDay();
+    
+    // Mostramos el día de la semana en la página HTML
+ //   document.getElementById("diaSemana").innerHTML = "El día de la semana es: " + diaDeLaSemana;
+  </script>
+</body>
+</html>
+
+<maria.html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #18d641;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        main {
+            padding: 20px;
+        }
+        #file-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .file-item {
+            width: 200px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .file-item img {
+            width: 100%;
+            height: auto;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        img {
+            display: block;
+            margin: 20px auto; /* Esto centra la imagen horizontalmente */
+            max-width: 100%;
+            height: auto;
+        }
+
+         /* Estilos para los enlaces en la barra de navegación */
+         nav a {
+            color: rgba(21, 22, 21, 0.9); /* Color del texto */
+            text-decoration: none; /* Sin subrayado */
+            padding: 10px; /* Espaciado interno */
+            margin-right: 10px; /* Margen derecho entre enlaces */
+        }
+        
+    </style>
+     <img src="Logo para Firma Correo 2024.jpg" alt="Descripción de la imagen">
+</head>
+<body>
+      <header>
+        <h1>Corporación Amor Por Colombia - HOGAR DE MARIA</h1>
+    </header>
+     <nav>
+        <a href="#" id="pdf-option">Cronograma</a>
+        <a href="#" id="excel-option">Talento Humano</a>
+        <a href="#" id="word-option">Usuarios</a>
+        <a href="#" id="word-option0">Talleres Familia</a>
+        <a href="#" id="word-option1">Diario Vivir Semanal</a>
+        <a href="#" id="image-option">Diario Vivir</a>
+        <a href="#" id="pdf-option0">Seguimiento</a>
+    </nav>
+    <main>
+         <div id="file-container">
+            <!-- Aquí se cargarán los archivos -->
+        </div>
+    </main>
+    
+   <!-- Elemento HTML donde se mostrará el día de la semana -->
+    <script>
+    document.getElementById('pdf-option').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadFiles('pdf');
+        });
+        document.getElementById('pdf-option0').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadFiles('pdf0');
+        });
+        document.getElementById('excel-option').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadFiles('excel');
+        });
+
+        document.getElementById('word-option').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadFiles('word');
+        });
+        document.getElementById('word-option0').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadFiles('word0');
+        });
+        document.getElementById('word-option1').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadFiles('word1');
+        });
+
+        document.getElementById('image-option').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadFiles('image');
+        });
+        function loadFiles(type) {
+            // Simulación de carga de archivos
+            var fileContainer = document.getElementById('file-container');
+            fileContainer.innerHTML = '';
+            // Dependiendo del tipo de archivo, puedes cargar diferentes ejemplos
+            if (type === 'pdf') {
+                // Aquí cargarías los archivos cronograma
+                fileContainer.innerHTML = '<div class="file-item"><iframe  width="1600" height="600" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?cid=7F5FC3A38FB51E15&resid=7F5FC3A38FB51E15%2136042&authkey=%21AFV5ezOzAldECQU"></iframe>';
+            } else if (type === 'excel') {
+                // Aquí cargarías los archivos Talento humano
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="600" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2135652&authkey=%21AL6NgfZ78GodAKo&em=2&AllowTyping=True&Item=base&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+            } else if (type === 'word') {
+                // Aquí cargarías los usuarios
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2136073&authkey=%21AGcQpA21gXkJKU8&em=2&Item=BASE&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+            } else if (type === 'word0') {
+                // Aquí cargarías los padres
+                fileContainer.innerHTML = '<div class="file-item"><embed src="Padres - Hogar de María.pdf" type="application/pdf" width="750%" height="600px" /></div>';
+            } else if (type === 'word1') {
+                // Aquí cargarías los usuarios
+                fileContainer.innerHTML = '<div class="file-item"><embed src="diario seman.pdf" type="application/pdf" width="750%" height="600px" /></div>';
+            } else if (type === 'image') {
+                // Aquí cargarías las imágenes
+                switch (diaDeLaSemana) {
+                case 0:
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2136028&authkey=%21AEfHzWY181CWbzM&em=2&wdAllowInteractivity=False&Item=domingo&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+                    break;
+                case 1:
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2136028&authkey=%21AEfHzWY181CWbzM&em=2&wdAllowInteractivity=False&Item=lunes&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+                    break;
+                case 2:
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2136028&authkey=%21AEfHzWY181CWbzM&em=2&wdAllowInteractivity=False&Item=martes&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+                    break;
+                case 3:
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2136028&authkey=%21AEfHzWY181CWbzM&em=2&wdAllowInteractivity=False&Item=miercoles&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+                    break;
+                case 4:
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2136028&authkey=%21AEfHzWY181CWbzM&em=2&wdAllowInteractivity=False&Item=jueves&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+                    break;
+                case 5:
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2136028&authkey=%21AEfHzWY181CWbzM&em=2&wdAllowInteractivity=False&Item=viernes&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+                    break;
+                case 6:
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2136028&authkey=%21AEfHzWY181CWbzM&em=2&wdAllowInteractivity=False&Item=sabado&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+                    break;
+                default:
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="600" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2135652&authkey=%21AL6NgfZ78GodAKo&em=2&AllowTyping=True&Item=base&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+                    break;
+            }
+//                fileContainer.innerHTML = '<div class="file-item"><img src="ejemplo_imagen.jpg" alt="Ejemplo de Imagen" /></div>';
+} else if (type === 'pdf0') {
+                // Aquí cargarías seguimiento al cronograma
+                fileContainer.innerHTML = '<div class="file-item"><iframe width="1600" height="776" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7F5FC3A38FB51E15%2136041&authkey=%21AI42cDRak1NpCxU&em=2&wdAllowInteractivity=False&Item=tablero&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>';
+            }
+        }
+    </script>
+</body>
+</html>
